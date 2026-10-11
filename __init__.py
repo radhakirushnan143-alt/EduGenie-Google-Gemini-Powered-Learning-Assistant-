@@ -1,13 +1,25 @@
-# This file is dual licensed under the terms of the Apache License, Version
-# 2.0, and the BSD License. See the LICENSE file in the root of this repository
-# for complete details.
+"""FastAPI framework, high performance, easy to learn, fast to code, ready for production"""
 
-from __future__ import annotations
+__version__ = "0.143.0"
 
-from cryptography.__about__ import __author__, __copyright__, __version__
+from starlette import status as status
 
-__all__ = [
-    "__author__",
-    "__copyright__",
-    "__version__",
-]
+from .applications import FastAPI as FastAPI
+from .background import BackgroundTasks as BackgroundTasks
+from .datastructures import UploadFile as UploadFile
+from .exceptions import HTTPException as HTTPException
+from .exceptions import WebSocketException as WebSocketException
+from .param_functions import Body as Body
+from .param_functions import Cookie as Cookie
+from .param_functions import Depends as Depends
+from .param_functions import File as File
+from .param_functions import Form as Form
+from .param_functions import Header as Header
+from .param_functions import Path as Path
+from .param_functions import Query as Query
+from .param_functions import Security as Security
+from .requests import Request as Request
+from .responses import Response as Response
+from .routing import APIRouter as APIRouter
+from .websockets import WebSocket as WebSocket
+from .websockets import WebSocketDisconnect as WebSocketDisconnect
